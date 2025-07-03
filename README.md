@@ -8,7 +8,7 @@
 
 
 
-### Versão 0.0.3
+### Versão 0.0.1
 #### Esta api receberá atualizações e será mais documentada e em breve, ela fará parte de um conjunto de micro serviços.
 
 
@@ -24,25 +24,31 @@
 
 ### Estrutura do Projeto.
         src/
-        └── main
-            ├── java
-            │   └── com
-            │       └── exemplo
-            │           └── produto
-            │               ├── config
-            │               │   └── SwaggerConfig.java -> Config do Swagger
-            │               ├── controller
-            │               │   ├── HelloController.java -> Controllers para verificação do estado da API
-            │               │   └── ProdutoController.java -> Controllers para realização de operações com produtos
-            │               ├── entity
-            │               │   └── Produto.java -> Entidade/Modelo dos Objetos(Produtos)
-            │               ├── ProdutoCrudApplication.java -> Classe Main da aplicação
-            │               ├── repository
-            │               │   └── ProdutoRepository.java -> Interface para a injeção de dependência da aplicação
-            │               └── service
-            │                   └── ProdutoService.java -> Camada de abstração para servir as realização de operações
-            └── resources
-                └── application.properties
+        ├── main
+        │   ├── java
+        │   │   └── com
+        │   │       └── example
+        │   │           └── jwt
+        │   │               ├── controller
+        │   │               │   └── AuthController.java
+        │   │               ├── JwtApplication.java
+        │   │               ├── model
+        │   │               │   └── User.java
+        │   │               ├── repository
+        │   │               │   └── UserRepository.java
+        │   │               ├── security
+        │   │               │   ├── JwtUtil.java
+        │   │               │   └── SecurityConfig.java
+        │   │               └── service
+        │   │                   └── AuthService.java
+        │   └── resources
+        │       └── application.properties
+        └── test
+            └── java
+                └── com
+                    └── example
+                        └── jwt
+                            └── JwtApplicationTests.java
                 
         
 ### Como rodar:
